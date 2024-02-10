@@ -8,8 +8,9 @@ import {
   PAUSE,
   REHYDRATE,
 } from "redux-persist";
-import authReducer from "./authSlice";
+import authReducer from "./auth/authSlice";
 import persistReducer from "redux-persist/es/persistReducer";
+import persistStore from "redux-persist/es/persistStore";
 
 const authPersistConfig = {
   key: "auth",
@@ -17,7 +18,7 @@ const authPersistConfig = {
   whitelist: ["token", "isAuthenticated"],
 };
 
-const store = configureStore({
+export const store = configureStore({
   reducer: { auth: persistReducer(authPersistConfig, authReducer) },
   middleware: (getDefaultMiddleware) => [
     ...getDefaultMiddleware({
@@ -28,4 +29,4 @@ const store = configureStore({
   ],
 });
 
-export default store;
+export const persistor = persistStore(store);
