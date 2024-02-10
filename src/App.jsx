@@ -1,16 +1,14 @@
 import { Toaster } from "react-hot-toast";
 import "./App.css";
-// import { Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import StartPage from "./pages/StartPage";
 
 function App() {
   return (
     <>
-      {/* <Routes></Routes> */}
-      <div className="card">
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
+      <Routes>
+        <Route path="/" element={<StartPage />} />
+      </Routes>
       <Toaster />
     </>
   );
