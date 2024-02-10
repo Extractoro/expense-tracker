@@ -1,6 +1,6 @@
 # React + Vite
 
-## Figma design: https://www.figma.com/file/n9GsOqzwz3x77deykDIZ9M/Income-%26-Expense-Tracker-App-(Community)-(Copy)?type=design&node-id=0-1&mode=design&t=Jo89Ntzn8K5DLZgo-0
+## Figma design: https://www.figma.com/file/SJrTWFX6KRnqnLFpzyrbo0/Income-%26-Expense-Tracker-App-(Community)?type=design&t=wKA3UAdy7rgeibkP-6
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
