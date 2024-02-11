@@ -7,9 +7,11 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { PersistGate } from "redux-persist/integration/react";
 
+// basename="/expanse-tracker-extractoro.netlify.app/"
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter basename="https://expanse-tracker-extractoro.netlify.app/">
+    <BrowserRouter>
       <PersistGate loading={null} persistor={persistor}>
         <Provider store={store}>
           <App />
