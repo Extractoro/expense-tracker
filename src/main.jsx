@@ -9,7 +9,7 @@ import { PersistGate } from "redux-persist/integration/react";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/expanse-tracker-extractoro.netlify.app/">
       <PersistGate loading={null} persistor={persistor}>
         <Provider store={store}>
           <App />
