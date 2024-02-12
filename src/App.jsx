@@ -7,6 +7,9 @@ import LoginPage from "./pages/LoginPage";
 import PublicRoute from "./utils/PublicRoute";
 import PrivateRoute from "./utils/PrivateRoute";
 import HomePage from "./pages/HomePage";
+import ProfilePage from "./pages/ProfilePage";
+import WalletPage from "./pages/WalletPage";
+import StatsPage from "./pages/StatsPage";
 
 function App() {
   return (
@@ -24,6 +27,15 @@ function App() {
 
         <Route path="/" element={<PrivateRoute restricted />}>
           <Route path="/home" element={<HomePage />} />
+        </Route>
+        <Route path="/" element={<PrivateRoute restricted />}>
+          <Route path="/stats" element={<StatsPage />} />
+        </Route>
+        <Route path="/" element={<PrivateRoute restricted />}>
+          <Route path="/wallet" element={<WalletPage />} />
+        </Route>
+        <Route path="/" element={<PrivateRoute restricted />}>
+          <Route path="/profile" element={<ProfilePage />} />
         </Route>
       </Routes>
       <Toaster />

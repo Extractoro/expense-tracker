@@ -1,9 +1,13 @@
 import { Outlet } from "react-router-dom";
+import Navigation from "./Navigation";
 
-const Header = () => {
+const Header = ({ isActive }) => {
   return (
     <>
-      <header>Header</header>;
+      <header className="bg-white py-4 shadow-md">
+        <Navigation isActive={isActive} />
+      </header>
+
       <Outlet />
     </>
   );
