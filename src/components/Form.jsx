@@ -16,6 +16,7 @@ const Form = ({ variant }) => {
 
     if (name.trim === "" || email.trim() === "" || password.trim() === "") {
       toast.error("Please enter all inputs.");
+      return;
     }
 
     if (variant === "login") {
@@ -101,8 +102,7 @@ const Form = ({ variant }) => {
       </label>
 
       <button
-        className="mt-5 w-4/5 bg-gradient-to-b from-[#69AEA9] to-[#3F8782] rounded-[40px] md:py-3 py-1 font-semibold md:text-lg text-base leading-9 tracking-tight text-white text-center "
-        // relative hover:top-1 transition-all duration-300  hover:bg-[#539a95]
+        className="mt-5 w-4/5 bg-gradient-to-b from-[#69AEA9] to-[#3F8782] rounded-[40px] md:py-3 py-1 font-semibold md:text-lg text-base leading-9 tracking-tight text-white text-center transition-all duration-300 relative top-0 hover:top-[3px]"
         type="submit"
       >
         {variant === "register" ? "Registration" : "Login"}

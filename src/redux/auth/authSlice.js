@@ -14,13 +14,13 @@ const authSlice = createSlice({
     builder
       .addCase(authOperations.register.fulfilled, (state, action) => {
         state.isAuthenticated = true;
-        state.token = action.payload.token;
-        state.user = action.payload.user;
+        state.token = action?.payload?.token;
+        state.user = action?.payload?.user;
       })
       .addCase(authOperations.login.fulfilled, (state, action) => {
         state.isAuthenticated = true;
-        state.token = action.payload.token;
-        state.user = action.payload.user;
+        state.token = action?.payload?.token;
+        state.user = action?.payload?.user;
       })
       .addCase(authOperations.logout.fulfilled, (state) => {
         state.isAuthenticated = false;
