@@ -4,7 +4,7 @@ import authOperations from "./authOperations";
 const initialState = {
   isAuthenticated: false,
   token: null,
-  user: { name: null, surname: null, email: null },
+  user: { name: null, email: null },
 };
 
 const authSlice = createSlice({
@@ -25,7 +25,7 @@ const authSlice = createSlice({
       .addCase(authOperations.logout.fulfilled, (state) => {
         state.isAuthenticated = false;
         state.token = null;
-        state.user = { name: null, surname: null, email: null };
+        state.user = { name: null, email: null };
       })
       .addCase(authOperations.refreshCurrent.fulfilled, (state, action) => {
         state.isAuthenticated = true;

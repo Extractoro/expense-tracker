@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<PublicRoute />}>
+        <Route path="/" element={<PublicRoute restricted />}>
           <Route path="/" element={<StartPage />} />
         </Route>
         <Route path="/" element={<PublicRoute restricted />}>
@@ -25,16 +25,16 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
         </Route>
 
-        <Route path="/" element={<PrivateRoute restricted />}>
+        <Route path="/" element={<PrivateRoute />}>
           <Route path="/home" element={<HomePage />} />
         </Route>
-        <Route path="/" element={<PrivateRoute restricted />}>
+        <Route path="/" element={<PrivateRoute />}>
           <Route path="/stats" element={<StatsPage />} />
         </Route>
-        <Route path="/" element={<PrivateRoute restricted />}>
+        <Route path="/" element={<PrivateRoute />}>
           <Route path="/wallet" element={<WalletPage />} />
         </Route>
-        <Route path="/" element={<PrivateRoute restricted />}>
+        <Route path="/" element={<PrivateRoute />}>
           <Route path="/profile" element={<ProfilePage />} />
         </Route>
       </Routes>
