@@ -6,7 +6,7 @@ const HomePage = () => {
   return (
     <>
       <Header isActive={`header`} />
-      <section className="bg-gradient-to-t from-[#69AEA9] to-[#3F8782] text-white h-[300px] pt-5">
+      <section className="bg-gradient-to-t from-[#69AEA9] to-[#3F8782] text-white h-[290px] pt-5 rounded-b-3xl">
         <Container>
           <Main />
         </Container>

@@ -21,11 +21,20 @@ const Form = ({ variant }) => {
 
     if (variant === "login") {
       dispatch(authOperators.login({ email, password }));
+      toast.success("Login successfully!");
     } else {
       dispatch(authOperators.register({ name, email, password }));
+      toast.success("Registration successfully!");
     }
 
-    toast.success("Registration successfully!");
+    window.localStorage.setItem(
+      "userData",
+      JSON.stringify({
+        cards: [],
+        incomes: [],
+        expenses: [],
+      })
+    );
     reset();
   };
 
